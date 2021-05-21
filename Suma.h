@@ -7,6 +7,9 @@
 #ifndef Suma_h
 #define Suma_h
 #include "Operacion.h"
+
+using namespace std;
+
 class Suma: public Operacion{
     public:
         Suma();
@@ -23,11 +26,11 @@ Suma::Suma(int v1, int v2): Operacion(v1, v2){
 }
 
 void Suma::Operar(){
-    cout << "Esta es una suma: " << endl;
     resultado= valor1+valor2; 
-    cout << resultado << endl;
+    setResultado(resultado);
+    cout << endl << "El resultado de la suma " << valor1 << " + " << valor2 << " = ";
+    MostrarResultado();
 }
 
-Operacion valor1;
 
 #endif /* Suma_h */

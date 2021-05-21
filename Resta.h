@@ -12,9 +12,7 @@ class Resta: public Operacion{
     public:
         Resta();
         Resta(int,int);
-        void Operar_resta(int valor1,int valor2);
-    
-    private:
+        void Operar();
 };
 
 Resta::Resta():Operacion(){
@@ -25,9 +23,11 @@ Resta::Resta(int v1, int v2): Operacion(v1, v2){
     valor2=v2;
 }
 
-void Resta::Operar_resta(int valor1,int valor2){
+void Resta::Operar(){
     resultado= valor1 - valor2;
-    cout << "a" << endl;
+    Operacion::setResultado(resultado);
+    cout << endl << "El resultado de la resta " << valor1 << " - " << valor2 << " = ";
     MostrarResultado();
+
 }
 #endif /* Resta_h */

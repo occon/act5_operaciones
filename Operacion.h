@@ -16,6 +16,7 @@ class Operacion{
         void setValor2(int);
         int getValor1();
         int getValor2();
+        void setResultado(int);
         void MostrarResultado();
     
     protected:
@@ -50,6 +51,10 @@ void Operacion::setValor1(int _valor1){
 
 void Operacion::setValor2(int _valor2){
     valor2=_valor2;
+}
+
+void Operacion::setResultado(int _resultado){
+    resultado=_resultado;
 }
 
 //Métodos
